@@ -1,27 +1,20 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-pids
-logs
-results
-
-npm-debug.log
+.DS_Store
 node_modules
-bower_components
+/dist
 
-*.git
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
 .idea
-run
-
-*/temp
-*lab.js
-*lab-min.js
-*index.css
-
-settings.js
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
