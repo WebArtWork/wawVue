@@ -4,6 +4,7 @@ import App from './components/App.vue'
 import Start from './Start.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import VueRouter from 'vue-router'
+import wcom from 'vue-router'
 
 Vue.config.productionTip = false
 

@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "vue": "^2.5.13",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "wvcom": "*"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.1",
