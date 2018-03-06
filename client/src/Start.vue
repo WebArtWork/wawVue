@@ -1,4 +1,4 @@
-<template>
+<template v-mydirective>
 <div id="start">
 	<header>
 		<div class="wrapeer_header">
@@ -18,6 +18,7 @@
 	export default {
   name: 'Start'
 }
+
 </script>
 <style lang="scss">
 	
