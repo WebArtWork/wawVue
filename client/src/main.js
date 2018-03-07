@@ -14,8 +14,12 @@ new Vue({
   render: h => h(Start),
   router,
   created: function() {
-   // this.$mongoMethod();
-   // this.$newMongoMethod();
-   this.$server();
+   var self = this;
+   this.users = this.get('user', function(){
+   	console.log('this.users');
+   	//console.log(this.users); // this don't have the correct array
+   	console.log('self.users');
+   	console.log(self.users); // this show correct as this is not working here anymore
+   });
   }
 })
