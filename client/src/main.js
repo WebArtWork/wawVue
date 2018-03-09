@@ -11,10 +11,11 @@ Vue.config.productionTip = false
 
 new Vue({
   el: "#app",
-  render: h => h(Start),
+	render: h => h(Start),
   router,
   created: function() {
    var self = this;
+   console.log(self);
    this.users = this.get('user', function(){
    	console.log('this.users');
    	//console.log(this.users); // this don't have the correct array
