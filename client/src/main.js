@@ -15,11 +15,11 @@ new Vue({
   router,
   created: function() {
    var self = this;
-   this.users = this.get('user', function(){
-   	console.log('this.users');
-   	//console.log(this.users); // this don't have the correct array
-   	console.log('self.users');
-   	console.log(self.users); // this show correct as this is not working here anymore
-   });
+this.users = this.get('user', function(){
+	console.log('this.users');
+	//console.log(this.users); // this don't have the correct array
+	console.log('self.users');
+	console.log(self.users); // this show correct as this is not working here anymore
+});
   }
 })
