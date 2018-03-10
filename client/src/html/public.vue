@@ -1,12 +1,12 @@
 <template >
 	<div id="pablic" class="border">
-		<div class="wrap_routes">
+		<!-- <div class="wrap_routes">
 			<h1>Hello Public</h1>
 			<router-link to="/public/Explore"> Explore </router-link>
 			<router-link to="/public/Login"> Login </router-link>
 			<router-link to="/public/Profile"> Profile </router-link>
 			<router-link to="/public/Sign"> Sign </router-link>
-		</div>
+		</div> -->
 		<router-view></router-view>
 	</div>
 

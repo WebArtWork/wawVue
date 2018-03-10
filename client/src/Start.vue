@@ -2,13 +2,11 @@
 	<div id="start">
 		<header class="header_start">
 				<div class="wrapeer_header">
-					<img src="./assets/logo.png" alt="logo" class="logo">
+					<router-link to="/"> <img src="./assets/logo.png" alt="logo" class="logo"> </router-link>
 					<nav>
 						<h1>Welcome to my build WaWVue</h1>
-						<router-link to="/"> Home </router-link>
-						<router-link to="/public"> Public </router-link>
-						<router-link to="/admin"> Admin </router-link>
-						<router-link to="/user"> User </router-link>
+						<router-link to="/public/Sign"> Sign </router-link>
+						<router-link to="/public/Login"> Login </router-link>
 					</nav>
 				</div>
 		</header>
