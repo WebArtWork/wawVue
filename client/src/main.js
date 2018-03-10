@@ -9,6 +9,7 @@ Vue.use(wvcom)
 Vue.use(VueResource)
 Vue.config.productionTip = false
 
+
 new Vue({
   el: "#app",
 	render: h => h(Start),

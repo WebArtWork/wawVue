@@ -3,26 +3,20 @@
 		<header class="header_start">
 			<img src="./assets/logo.png" alt="logo" class="logo">
 			<div class="wrapeer_header">
-				<nav class="bu">
+				<nav>
 					<h1>Welcome to my build WaWVue</h1>
-					<router-link to="/"> Admin </router-link>
 					<router-link to="/"> Public </router-link>
+					<router-link to="/admin"> Admin </router-link>
 					<router-link to="/"> User </router-link>
 				</nav>
 			</div>
+	<router-view></router-view>
 		</header>
-		<router-view class ="content"></router-view>
+	
 	</div>
 </template>
 
 <script>
-	export default {
-		name: 'Start',
-		component:("start",{
-			template: "#start-template"
-		})
-	}
-
 </script>
 <style lang="scss">
 	#start{

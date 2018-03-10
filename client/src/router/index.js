@@ -1,14 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Explore from '@/public/Explore'
-import Login from '@/public/Login'
-import Profile from '@/public/Profile'
-import Sign from '@/public/Sign'
-import adminProfile from '@/admin/Profile'
-import SuperAdmin from '@/admin/SuperAdmin'
-import Users from '@/admin/Users'
-import MyProfile from '@/user/MyProfile'
-import MySettings from '@/user/MySettings'
+import Explore from '@/html/public/Explore'
+import Login from '@/html/public/Login'
+import Profile from '@/html/public/Profile'
+import Sign from '@/html/public/Sign'
+import adminProfile from '@/html/admin/Profile'
+import SuperAdmin from '@/html/admin/SuperAdmin'
+import Users from '@/html/admin/Users'
+import MyProfile from '@/html/user/MyProfile'
+import MySettings from '@/html/user/MySettings'
+import AdminPage from '@/html/admin'
+import UserPage from '@/html/user'
+import PublicPage from '@/html/public'
 
 
 Vue.use(Router)
@@ -16,49 +19,71 @@ Vue.use(Router)
 export default new Router({
  routes: [
 	{ 
-		path: '/Explore',
-		name: "pageOne",
-		component: Explore
+		path: '/admin/:name',
+		name: "Admin",
+		component: AdminPage,
+		children: [
+			{
+				path: 'Profile',
+				name: "pageThree",
+				component: adminProfile
+			},
+			{
+				path: 'SuperAdmin',
+				name: "pageSix",
+				component: SuperAdmin
+			},
+			{
+				path: 'Users',
+				name: "pageSeven",
+				component: Users
+			}
+
+		]
 	},
-	{ 
-		path: '/Login',
-		name: "pageTwo",
-		component: Login
+	{
+		path: '/user',
+		name: "User",
+		component: UserPage,
+		children: [
+			{
+				path: 'MyProfile',
+				name: "pageEight ",
+				component: MyProfile
+			},
+			{
+				path: 'MySettings',
+				name: "pageNine",
+				component: MySettings
+			}
+		]
 	},
-	{ 
-		path: '/Profile',
-		name: "pageThree",
-		component: Profile
-	},
-	{ 
-		path: '/Sign',
-		name: "pageFour",
-		component: Sign
-	},
-	{ 
-		path: '/Profile',
-		name: "pageFive",
-		component: adminProfile
-	},
-	{ 
-		path: '/SuperAdmin',
-		name: "pageSix",
-		component: SuperAdmin
-	},
-	{ 
-		path: '/Users',
-		name: "pageSeven",
-		component: Users
-	},
-	{ 
-		path: '/MyProfile',
-		name: "pageEight ",
-		component: MyProfile
-	},
-	{ 
-		path: '/MySettings',
-		name: "pageNine",
-		component: MySettings
+	{
+		path: '/public',
+		name: "Public",
+		component: PublicPage,
+		children: [
+			{
+				path: 'Explore',
+				name: "pageOne",
+				component: Explore
+			},
+			{
+				path: 'Login',
+				name: "pageTwo",
+				component: Login
+			},
+			{
+				path: 'Profile',
+				name: "pageFive",
+				component: Profile
+			},
+			{
+				path: 'Sign',
+				name: "pageFour",
+				component: Sign
+			}
+		]
 	}
 	],
 	// mode: 'history'
