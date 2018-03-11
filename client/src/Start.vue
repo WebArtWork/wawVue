@@ -5,8 +5,8 @@
 					<router-link to="/"> <img src="./assets/logo.png" alt="logo" class="logo"> </router-link>
 					<nav>
 						<h1>Welcome to my build WaWVue</h1>
-						<router-link to="/public/Sign"> Sign </router-link>
-						<router-link to="/public/Login"> Login </router-link>
+						<router-link to="/Sign" class= "link"> Sign </router-link>
+						<router-link to="/Login" class= "link"> Login </router-link>
 					</nav>
 				</div>
 		</header>
@@ -15,7 +15,9 @@
 </template>
 
 <script>
+
 </script>
+
 <style lang="scss">
 	#start{
 		width: 100%;
@@ -24,18 +26,19 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		position: relative;
-		a{
-			text-decoration: none;
+		.link{
 			margin-right: 10px;
-			color: #40B782;
+			color: black;
+			padding: 15px 30px; 
+			background-color: rgba(64,183,130,.6);
+			transition: all .3s;
 			&:nth-last-child(1){
 				margin-right: 0;
 			}
+			&:hover{
+				background-color: rgba(64,183,130,1);
+			}
 		}
-	}
-	.border{
-		border-left: 1px solid #ccc; 
-		padding-left: 20px;
 	}
 	.header_start{
 		display: flex;
@@ -56,13 +59,15 @@
 		height: 100px;
 		position: relative;
 		justify-content: flex-start;
-		margin: 0 50px;
+		margin: 15px 50px;
 	}
 	.router{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		position: relative;
-		border:1px solid #40B782;
+		border-top:1px solid #40B782;
+		border-bottom:1px solid #40B782;
 		height: auto;
+		padding: 0 30px;
 	}
 </style>

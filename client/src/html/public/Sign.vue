@@ -12,5 +12,8 @@
 </script>
 
 <style lang="scss">
-
+	h1{
+		margin-right: 20px;
+		
+	}
 </style>

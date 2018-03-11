@@ -18,7 +18,8 @@ Vue.use(Router)
 
 export default new Router({
  routes: [
-	// { path: '/admin', name: "Admin", component: AdminPage}, 
+	{ path: '/Login', name: "pageTwo", component: Login },
+	{ path: '/Sign', name: "pageFour", component: Sign },
 	{ path: '/admin/', name: "Admin", component: AdminPage, 
 	children: [
 			{ path: 'Profile', name: "pageThree", component: adminProfile },
@@ -35,11 +36,9 @@ export default new Router({
 	{ path: '/public', name: "Public", component: PublicPage,
 	children: [
 			{ path: 'Explore', name: "pageOne", component: Explore },
-			{ path: 'Login', name: "pageTwo", component: Login },
 			{ path: 'Profile', name: "pageFive", component: Profile },
-			{ path: 'Sign', name: "pageFour", component: Sign }
 			]
 		}
 	],
-	// mode: 'history'
+	mode: 'history'
 })
