@@ -1,16 +1,34 @@
 <template >
-	<div id="explore" class="border">
-
-		<h1>Explore</h1>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quidem vitae necessitatibus. Sint laborum voluptatibus aliquid cum numquam maxime quia, eum dolorum ipsam aperiam. Aperiam consectetur eius dolores nemo commodi.</p>
+	<div id="explore">
+		<div class="post" v-for="name in users" >
+			<span> Id {{ name.avatarUrl }} </span>
+		</div>
+		<p></p>
+		<span>Explore</span>
 	</div>
+	
 </template>
 
 <script>
-
+export default {
+  created: function() {
+    // this.user();
+     var self = this;
+      self.users = this.get('user', function(){
+        console.log(self.users);
+        console.log(self.users[0].avatarUrl);
+    });
+      
+  }
+}
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+	span{
+		color: black;
+		padding: 10px;
+		background-color: #ccc;
+		margin-bottom: 10px;
+		display: block;
+	}
 </style>

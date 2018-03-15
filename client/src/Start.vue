@@ -10,12 +10,18 @@
 					</nav>
 				</div>
 		</header>
+    	<explore></explore>
 	<router-view class="router"></router-view>
 	</div>
 </template>
 
 <script>
-
+import Explore from "./html/public/Explore.vue"
+export default {
+	components: {
+		Explore
+	}
+}
 </script>
 
 <style lang="scss">
