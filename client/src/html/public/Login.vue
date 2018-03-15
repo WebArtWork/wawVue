@@ -1,9 +1,23 @@
 <template >
-	<div id="login" class="border">
-
-		<h1>Login</h1>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quidem vitae necessitatibus. Sint laborum voluptatibus aliquid cum numquam maxime quia, eum dolorum ipsam aperiam. Aperiam consectetur eius dolores nemo commodi.</p>
+	<div>
+		<div>
+			<div>
+				<div>
+					<form action="/api/user/login" method="POST">
+						<h1>Login</h1>
+						<label>
+							<h2>E-mail</h2>
+							<input type="email" name="username" placeholder="email">
+						</label>
+						<label>
+							<h2>Password</h2>
+							<input type="password" name="password" placeholder="password">
+						</label>
+						<button>Sign</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
