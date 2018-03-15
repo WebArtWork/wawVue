@@ -20,6 +20,7 @@ export default new Router({
  routes: [
 	{ path: '/Login', name: "pageTwo", component: Login },
 	{ path: '/Sign', name: "pageFour", component: Sign },
+	{ path: '/Explore', name: "pageOne", component: Explore },
 	{ path: '/admin/', name: "Admin", component: AdminPage, 
 	children: [
 			{ path: 'Profile', name: "pageThree", component: adminProfile },
@@ -35,7 +36,6 @@ export default new Router({
 		},
 	{ path: '/public', name: "Public", component: PublicPage,
 	children: [
-			{ path: 'Explore', name: "pageOne", component: Explore },
 			{ path: 'Profile', name: "pageFive", component: Profile },
 			]
 		}

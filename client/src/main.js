@@ -15,14 +15,5 @@ Vue.config.productionTip = false
 new Vue({
   el: "#app",
 	render: h => h(Start),
-  router,
-  // created: function() {
-  //   // this.user();
-  //    var self = this;
-  //     this.users = this.get('user', function(){
-  //       console.log(self.users);
-  //       var names = self.users;
-  //       console.log(names[0].avatarUrl);
-  //   });
-  // }
+  router
 })
